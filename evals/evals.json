@@ -1,0 +1,19 @@
+{
+  "skill_name": "codegraph-analysis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "基于 <项目根> 的 .codegraph 索引，给这个项目生成一份面向运营人员的业务分析手册（运营不懂代码，要能看懂业务）。输出到指定目录。",
+      "expected_output": "docs/business-analysis/ 完整目录：README总览+术语表+业务域章节+运营工作台+系统底座，verify_report.py exit 0，正文零代码痕迹，规则带水位声明与五要素，推断有标注",
+      "files": [],
+      "note": "代入任意已建 codegraph 索引的真实项目执行；<项目根> 与输出目录由运行时指定"
+    },
+    {
+      "id": 2,
+      "prompt": "详细分析 <项目根> 里 <模块名> 模块的业务流程和业务规则，写成给运营看的一篇业务域文档。",
+      "expected_output": "单个业务域文档：frontmatter 四键齐全，六段骨架+四类规则小节，校验规则穷举自拦截点并带水位声明，规则卡五要素，流转标注推断，正文零代码",
+      "files": [],
+      "note": "代入目标项目的核心业务模块执行"
+    }
+  ]
+}
